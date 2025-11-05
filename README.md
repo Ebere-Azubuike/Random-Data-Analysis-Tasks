@@ -67,4 +67,43 @@ Questions
 3. Add a grid, axis labels, and a title to the plot.
 
 4. Customize the box plot with different colors for each grade class.
+
+
+# SUMMARY OF ANSWERS
+**Explanatory Summary of Improvements and Outcomes
+TASK 1 — Data Filtering, Cleaning, and Feature Engineering**
+
+In the first task, I worked with the HR Analytics dataset to perform several data manipulation and transformation tasks using Python and pandas. The improvements implemented focused on data cleaning, feature creation, normalization, and exploratory queries.
+
+✅ Key Improvements Made:
+
+**Data Filtering and Selection**
+I filtered rows where City_Development_Index > 0.8 and Company_Size > 3, focusing the analysis on more developed cities and larger organizations. 
+I also used .iloc to extract the first 10 rows of selected columns (Experience and Education_Level) for a quick preview.
+
+Gr**ouping and Aggregation**
+I grouped data by Relevant_Experience and calculated the average City Development Index (CDI) for each group, providing insights into how prior experience correlates with city development.
+Additionally, I grouped by Company_Size and counted unique Last_New_Job entries to understand workforce mobility patterns by company scale.
+
+**Data Cleaning and Missing Value Handling**
+Numerical columns with missing values were filled using their respective means, ensuring no data gaps remained for analysis.
+Rows with more than 50% missing data were dropped to improve dataset reliability. I documented the dataset’s shape before and after this operation to quantify the impact of data cleaning.
+
+**Feature Engineering**
+A new feature called Experience_Gap was created by subtracting Last_New_Job from Experience, allowing for analysis of career progression or job stability gaps.
+I also normalized City_Development_Index to a 0–1 scale, enabling fair comparison and avoiding scale bias during analysis.
+
+**Merging and Output**
+A new column cdi_per (CDI converted to percentage) was generated and merged back to the original DataFrame, enriching the dataset for further insights.
+The processed dataset was saved as an output file for future use.
+
+**Final Outcome:**
+
+The dataset became clean, consistent, and analysis-ready.
+
+Missing and inconsistent data were resolved.
+
+New analytical features (Experience_Gap, cdi_per, normalized CDI) were added for deeper insights.
+
+The script was enhanced with auto-installation of dependencies, making it runnable in any environment (VS Code, Jupyter, or Terminal).
    
